@@ -36,7 +36,7 @@ DOCKER_IMAGE_NAME ?= $(DOCKER_PROFILE)/server:$(DOCKER_TAG)
 docker:	## Build Docker image
 	docker build -t $(DOCKER_IMAGE_NAME) .
 
-push_docker:	## Push latest docker image to Docker repo
+docker_push:	## Push latest docker image to Docker repo
 	docker push $(DOCKER_IMAGE_NAME)
 
 ##
